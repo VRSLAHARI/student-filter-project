@@ -1,0 +1,29 @@
+<div>
+    <label for="subject">Subject:</label>
+    <select id="subject" [(ngModel)]="subject">
+      <option value="English">English</option>
+      <option value="Maths">Maths</option>
+      <option value="Science">Science</option>
+      <option value="SocialScience">Social Science</option>
+    </select>
+  </div>
+  
+  <div>
+    <input type="radio" id="above" name="condition" [(ngModel)]="condition" value="Above">
+    <label for="above">Above</label>
+    <input type="radio" id="below" name="condition" [(ngModel)]="condition" value="Below">
+    <label for="below">Below</label>
+    <input type="radio" id="between" name="condition" [(ngModel)]="condition" value="Between">
+    <label for="between">Between</label>
+  </div>
+  
+  <div>
+    <input type="number" [(ngModel)]="value1" placeholder="Value 1">
+    <input *ngIf="condition === 'Between'" type="number" [(ngModel)]="value2" placeholder="Value 2">
+  </div>
+  
+  <div>
+    <button (click)="applyFilter()">Filter</button>
+    <button (click)="clearFilter()">Clear</button>
+  </div>
+  

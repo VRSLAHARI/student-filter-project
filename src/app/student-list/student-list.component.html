@@ -1,0 +1,23 @@
+<table>
+    <thead>
+      <tr>
+        <th (click)="sortBy('id')">S.No</th>
+        <th (click)="sortBy('name')">Name</th>
+        <th (click)="sortBy('English')">English</th>
+        <th (click)="sortBy('Maths')">Maths</th>
+        <th (click)="sortBy('Science')">Science</th>
+        <th (click)="sortBy('SocialScience')">Social Science</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of filteredStudents">
+        <td>{{student.id}}</td>
+        <td>{{student.name}}</td>
+        <td>{{student.English}}</td>
+        <td>{{student.Maths}}</td>
+        <td>{{student.Science}}</td>
+        <td>{{student.SocialScience}}</td>
+      </tr>
+    </tbody>
+  </table>
+  
